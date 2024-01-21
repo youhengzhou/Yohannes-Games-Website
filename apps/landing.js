@@ -1,8 +1,6 @@
 export function landing(gameView) {
-  if (gameView) {
-    while (gameView.firstChild) {
-      gameView.removeChild(gameView.firstChild);
-    }
+  while (gameView.firstChild) {
+    gameView.removeChild(gameView.firstChild);
   }
 
   const welcomeContainer = document.createElement("div");

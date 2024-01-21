@@ -31,10 +31,8 @@ export async function TYOV(gameView) {
   let time = 0;
   let charInfo = "";
 
-  if (gameView) {
-    while (gameView.firstChild) {
-      gameView.removeChild(gameView.firstChild);
-    }
+  while (gameView.firstChild) {
+    gameView.removeChild(gameView.firstChild);
   }
 
   gameView.appendChild(createTYOVView());

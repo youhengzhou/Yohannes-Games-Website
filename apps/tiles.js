@@ -88,10 +88,8 @@ function render(inEle, world) {
 }
 
 export function tiles(gameView) {
-  if (gameView) {
-    while (gameView.firstChild) {
-      gameView.removeChild(gameView.firstChild);
-    }
+  while (gameView.firstChild) {
+    gameView.removeChild(gameView.firstChild);
   }
 
   let world = buildWorld(6, 6);

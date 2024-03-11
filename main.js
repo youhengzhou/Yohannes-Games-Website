@@ -1,14 +1,16 @@
 import { landing } from "./apps/landing.js";
 import { tiles } from "./apps/tiles.js";
-import { TYOV } from "./apps/TYOVrunner.js";
-
-const selectItems = [["home", "tiles game", "tyov game"]];
+import { TYOV } from "./apps/TYOV/TYOVrunner.js";
+import { simpleWorld } from "./apps/simpleworld/main.js";
 
 const selectGames = {
   home: landing,
   "tiles game": tiles,
   "tyov game": TYOV,
+  "simple world": simpleWorld,
 };
+
+const selectItems = [Object.keys(selectGames), ["temp"]];
 
 function renderBanner(inEle, gameView) {
   const banner = document.createElement("div");

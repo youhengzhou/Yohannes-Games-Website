@@ -1,3 +1,18 @@
+async function displayTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+
+  const formattedHours = hours < 10 ? "0" + hours : hours;
+  const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+  const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+
+  document.getElementById(
+    "clock"
+  ).innerHTML = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+}
+
 export function landing(gameView) {
   while (gameView.firstChild) {
     gameView.removeChild(gameView.firstChild);
@@ -9,11 +24,13 @@ export function landing(gameView) {
   const title = document.createElement("h1");
   title.textContent = "Welcome to Yohannes's game website";
 
-  const description = document.createElement("p");
-  description.textContent = "Explore a wide variety of games and have fun!";
+  const clock = document.createElement("div");
+  clock.id = "clock";
+  clock.innerHTML = `${0}:${0}:${0}`;
+  setInterval(displayTime, 1000);
 
   welcomeContainer.appendChild(title);
-  welcomeContainer.appendChild(description);
+  welcomeContainer.appendChild(clock);
 
   gameView.appendChild(welcomeContainer);
 }

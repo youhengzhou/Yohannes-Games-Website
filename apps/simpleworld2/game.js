@@ -120,7 +120,7 @@ function getWorld(rows, cols) {
       worldMap[x][y].char.name = person().name;
       worldMap[x][y].char.trait = person().trait;
       worldMap[x][y].char.atrs = {
-        adm: Math.floor(Math.random() * 6) + 100,
+        adm: Math.floor(Math.random() * 6) + 1,
         pop: Math.floor(Math.random() * 6) + 1,
         mrl: Math.floor(Math.random() * 6) + 1,
         prd: Math.floor(Math.random() * 6) + 1,

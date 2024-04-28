@@ -2,12 +2,14 @@ import { landing } from "./apps/landing.js";
 import { tiles } from "./apps/tiles.js";
 import { TYOV } from "./apps/TYOV/TYOVrunner.js";
 import { simpleWorld } from "./apps/simpleworld/main.js";
+import { sw2 } from "./apps/simpleworld2/main.js";
 
 const selectGames = {
   home: landing,
   "tiles game": tiles,
   "tyov game": TYOV,
   "simple world": simpleWorld,
+  "simple world 2": sw2,
 };
 
 const selectItems = [Object.keys(selectGames), ["temp"]];
